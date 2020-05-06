@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" method="upgrade" group="editors-xtd">
+        <name>Editor - Video Embedder Editor Plugin</name>
+        <author>eXtro-media GbR</author>
+        <creationDate>Mai 2016</creationDate>
+        <copyright>(c) eXtro-media GbR, 2015. All rights reserved.</copyright>
+        <license>GNU/GPL v3 or later http://www.gnu.org/licenses/gpl-3.0.html</license>
+        <authorEmail>info@extro-media.de</authorEmail>
+        <authorUrl>https://www.extro-media.de</authorUrl>
+        <version>1.2.0</version>
+        <description><![CDATA[
+          <div class="alert">
+          <h2>Video Embedder Editor Plugin - This Plugin is a Editor Plugin for the eXtro Video Embed Plugin.</h2>
+          <br />
+          <p>Optimized for Bootstrap 3.3.4+</p>
+          <br />
+          <p><strong>If you use <a href="" target="_blank">Video Embedder</a>, please post a rating and a review at the Joomla! Extensions Directory.</strong></p>
+          <br />
+          <p>Please read the extension's <a href="http://www.extro-media.de/en/software-en/quickstart-guides.html" target="_blank">users manual.</a></p>
+          <br /><br />
+          <p>More useful eXtensions by <a href="http://www.extro-media.de/" target="_blank">eXtro-media.de</a>:</p>
+          <div id="extro" class="klasse" >
+          </div>
+          </div>
+	        <style>
+	        .klasse { width: auto; height: auto; display: block; margin: 15px 0; } 
+          </style>
+          <script src="http://updates.extro-media.de/script.js" type="text/javascript">
+          </script>
+	        ]]>
+        </description>
+        <files>
+            <filename plugin="edvem">edvem.php</filename>
+            <filename>dialog.php</filename>
+            <filename>edvem.xml</filename>
+        </files>
+        <languages>
+          <language tag="de-DE">de-DE.plg_edvem.ini</language>
+          <language tag="de-DE">de-DE.plg_editors-xtd_edvem.ini</language>
+          <language tag="en-GB">en-GB.plg_edvem.ini</language>
+          <language tag="en-GB">en-GB.plg_editors-xtd_edvem.ini</language>
+        </languages>
+</extension>

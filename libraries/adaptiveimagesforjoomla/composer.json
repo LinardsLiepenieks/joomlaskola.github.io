@@ -1,0 +1,160 @@
+{
+    "description": "XT Adaptive Images PRO Library.",
+    "authors": [
+      {
+        "name": "Extly CB",
+        "email": "team@extly.com"
+      }
+    ],
+    "autoload": {
+      "psr-4": {
+        "XTDirforAlgolia\\": "src/"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "Tests\\": "tests/"
+      }
+    },
+    "config": {
+      "preferred-install": "dist",
+      "sort-packages": true,
+      "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+      "php": ">=5.6",
+
+      "anibalsanchez/adaptiveimages-common": "dev-master",
+      "anibalsanchez/extly-infrastructure-support": "dev-php56",
+      "anibalsanchez/extly-infrastructure-cms-contract": "dev-master",
+      "anibalsanchez/extly-infrastructure-cms-joomla": "dev-master",
+      "anibalsanchez/extly-html-asset-tags-builder": "dev-master"
+    },
+    "repositories": [
+      {
+        "url":
+          "git@github.com:anibalsanchez/adaptiveimages-common.git",
+        "type": "git"
+      },
+      {
+        "url": "git@github.com:anibalsanchez/extly-infrastructure-core.git",
+        "type": "git"
+      },
+      {
+        "url": "git@github.com:anibalsanchez/xtsearchforalgolia-app.git",
+        "type": "git"
+      },
+      {
+        "url": "git@github.com:anibalsanchez/extly-infrastructure-support.git",
+        "type": "git"
+      },
+      {
+        "url": "git@github.com:anibalsanchez/extly-infrastructure-cms-contract.git",
+        "type": "git"
+      },
+      {
+        "url": "git@github.com:anibalsanchez/extly-infrastructure-cms-joomla.git",
+        "type": "git"
+      }
+    ],
+    "extra": {
+      "php-prefixer": {
+        "projectName": "XT Search for Algolia",
+        "prefixForNamespaces": "XTP_BUILD",
+        "prefixForGlobalObjects": "XTP_",
+
+        "case-1": "includeLibrariesDependiencies: Process additional dependencies",
+
+        "case-2": "ignorePaths: Do not prefix.",
+        "ignorePaths": [
+        ],
+
+        "case-3": "ignoreLibraries: Do not prefix.",
+        "ignoreLibraries": [
+        ],
+
+        "case-4": "Do not prefix.",
+        "ignoreGlobalObjects": [
+          "JsonSerializable",
+          "jsonSerialize"
+        ],
+
+        "case-5": "Libraries to be removed, but keep dependecies consistent (Platform Lib).",
+        "excludeFromClassmap": [
+          "anibalsanchez/create-pattern",
+          "anibalsanchez/extly-html-asset-tags-builder",
+          "anibalsanchez/extly-infrastructure-cms-contract",
+          "anibalsanchez/extly-infrastructure-cms-joomla",
+          "anibalsanchez/extly-infrastructure-support",
+          "clue/stream-filter",
+          "danielstjules/stringy",
+          "doctrine/inflector",
+          "dragonmantank/cron-expression",
+          "guzzlehttp/psr7",
+          "illuminate/contracts",
+          "illuminate/support",
+          "jeremykendall/php-domain-parser",
+          "kylekatarnls/update-helper",
+          "league/uri",
+          "monolog/monolog",
+          "mtdowling/cron-expression",
+          "myclabs/php-enum",
+          "neitanod/forceutf8",
+          "nesbot/carbon",
+          "paragonie/random_compat",
+          "php-http/client-common",
+          "php-http/curl-client",
+          "php-http/discovery",
+          "php-http/httplug",
+          "php-http/message-factory",
+          "php-http/message",
+          "php-http/promise",
+          "psr/http-message",
+          "psr/log",
+          "ralouphie/getallheaders",
+          "studiow/html",
+          "symfony/options-resolver",
+          "symfony/polyfill-mbstring",
+          "symfony/translation"
+        ],
+
+        "case-6": "Files to be removed from the prefixer output.",
+        "excludePaths": [
+          "anibalsanchez/extly-infrastructure-cms-joomla/tests",
+          "anibalsanchez/extly-infrastructure-core/tests",
+          "anibalsanchez/extly-infrastructure-support/tests",
+          "anibalsanchez/xtsearchforalgolia-app/tests",
+          "clue/stream-filter/examples",
+          "clue/stream-filter/tests",
+          "doctrine/inflector/tests",
+          "dragonmantank/cron-expression/tests",
+          "league/uri-manipulations/tests",
+          "monolog/monolog/tests",
+          "ralouphie/getallheaders/tests",
+          "studiow/html/tests",
+          "symfony/console/Tests",
+          "symfony/contracts/Tests",
+          "symfony/debug/Resources/ext/tests",
+          "symfony/debug/Tests",
+          "symfony/event-dispatcher/Tests",
+          "symfony/finder/Tests",
+          "symfony/http-foundation/Tests",
+          "symfony/http-kernel/Tests",
+          "symfony/options-resolver/Tests",
+          "symfony/process/Tests",
+          "symfony/stopwatch/Tests",
+          "symfony/stopwatch/Tests",
+          "symfony/translation/Resources/bin",
+          "symfony/translation/Tests",
+          "tests"
+        ],
+
+        "case-7": "Process additional project directories",
+        "includeExtraSourcePaths": [
+          "../plugins"
+        ]
+      }
+    }
+}

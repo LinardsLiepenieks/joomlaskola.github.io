@@ -1,0 +1,11 @@
+#responsive-content-slider {
+    list-style-type: none;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+#responsive-content-slider img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}

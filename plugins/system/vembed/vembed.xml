@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="system" method="upgrade">
+	<name>Video Embedder</name>
+	<author>eXtro-media.de</author>
+	<creationDate>Mai 2016</creationDate>
+	<copyright>Copyright (C) 2015. All rights reserved.</copyright>
+	<license>GNU/GPL v3 or later http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>info@eXtro-media.de</authorEmail>
+	<authorUrl>www.eXtro-media.de</authorUrl>
+	<version>1.2.0</version>
+
+	<description><![CDATA[
+   <div class="alert">
+   <h2>eXtro Video Embedder Plugin - easily embed videos from various different video platforms.</h2>
+   <br />
+   <p>Optimized for Bootstrap 3.3.4+</p>
+   <br />
+   <p><strong>If you use <a href="" target="_blank">Video Embedder</a>, please post a rating and a review at the Joomla! Extensions Directory.</strong></p>
+   <br />
+   <p>Please read the extension's <a href="http://www.extro-media.de/en/software-en/quickstart-guides.html" target="_blank">users manual.</a></p>
+   <br /><br />
+   <p>More useful eXtensions by <a href="http://www.extro-media.de/" target="_blank">eXtro-media.de</a>:</p>
+   <div id="extro" class="klasse" >
+   </div>
+   </div>
+	<style>
+	.klasse { width: auto; height: auto; display: block; margin: 15px 0; } 
+   </style>
+   <script src="http://updates.extro-media.de/script.js" type="text/javascript">
+   </script>
+	]]>
+	</description>
+
+	<files>
+		<filename plugin="vembed">vembed.php</filename>
+		<filename>vembed.css</filename>
+		<filename>index.html</filename>
+		<filename>vembed.xml</filename>
+	</files>
+
+</extension>

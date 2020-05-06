@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.6" client="site" method="upgrade">
+	<name>Responsive Content Slider</name>
+	<creationDate>19-12-2016</creationDate>
+    <copyright>Copyright (C) 2016. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>ComponentGenerator</author>
+    <authorEmail>mail@componentgenerator.com</authorEmail>
+    <authorUrl>https://www.componentgenerator.com</authorUrl>
+    <version>1.0.0</version>
+    <description></description>
+    <files>
+        <filename>mod_responsive_content_slider.xml</filename>
+        <filename module="mod_responsive_content_slider">mod_responsive_content_slider.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>css/default.css</filename>
+		<folder>js</folder>
+    </files>
+	<languages>
+    	<language tag="en-GB">language/en-GB.mod_responsive_content_slider.ini</language>
+  	</languages>
+	<updateservers>
+		<server type="extension" name="Responsive Content Slider" priority="1">https://www.componentgenerator.com/updates/mod_responsive_content_slider_update.xml</server>
+	</updateservers>
+  	<config>
+	 	<fields name="params">
+            <fieldset name="basic">
+                <field
+                        name="slide_type"
+                        type="radio"
+                        label="MOD_RESPONSIVE_CONTENT_SLIDER_SLIDE_TYPE_FIELD_TYPE_LABEL"
+                        description="MOD_RESPONSIVE_CONTENT_SLIDER_SLIDE_TYPE_FIELD_TYPE_DESC"
+                        required="true"
+                        default="images">
+                    <option value="images">A) Images</option>
+                    <option value="content">B) Content (HTML)</option>
+                </field>
+            </fieldset>
+	 		<fieldset name="image_slide_settings">
+                <!-- Image 1 -->
+                <field name="slide_path_1"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_1_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_1_FIELD_TYPE_DESC" />
+                <field name="slide_url_1"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_1_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_1_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_1"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_1_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_1_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="1">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_1"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_1_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_1_FIELD_TYPE_DESC" />
+
+                <!-- Image 2 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_2"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_2_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_2_FIELD_TYPE_DESC" />
+                <field name="slide_url_2"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_2_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_2_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_2"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_2_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_2_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="2">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_2"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_2_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_2_FIELD_TYPE_DESC" />
+
+                <!-- Image 3 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_3"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_3_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_3_FIELD_TYPE_DESC" />
+                <field name="slide_url_3"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_3_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_3_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_3"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_3_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_3_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="3">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_3"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_3_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_3_FIELD_TYPE_DESC" />
+
+                <!-- Image 4 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_4"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_4_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_4_FIELD_TYPE_DESC" />
+                <field name="slide_url_4"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_4_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_4_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_4"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_4_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_4_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="4">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_4"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_4_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_4_FIELD_TYPE_DESC" />
+
+                <!-- Image 5 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_5"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_5_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_5_FIELD_TYPE_DESC" />
+                <field name="slide_url_5"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_5_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_5_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_5"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_5_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_5_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="5">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_5"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_5_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_5_FIELD_TYPE_DESC" />
+
+                <!-- Image 6 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_6"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_6_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_6_FIELD_TYPE_DESC" />
+                <field name="slide_url_6"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_6_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_6_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_6"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_6_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_6_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="6">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_6"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_6_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_6_FIELD_TYPE_DESC" />
+
+                <!-- Image 7 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_7"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_7_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_7_FIELD_TYPE_DESC" />
+                <field name="slide_url_7"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_7_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_7_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_7"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_7_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_7_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="7">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_7"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_7_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_7_FIELD_TYPE_DESC" />
+
+                <!-- Image 8 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_8"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_8_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_8_FIELD_TYPE_DESC" />
+                <field name="slide_url_8"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_8_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_8_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_8"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_8_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_8_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="8">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_8"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_8_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_8_FIELD_TYPE_DESC" />
+
+                <!-- Image 9 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_9"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_9_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_9_FIELD_TYPE_DESC" />
+                <field name="slide_url_9"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_9_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_9_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_9"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_9_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_9_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="9">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_9"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_9_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_9_FIELD_TYPE_DESC" />
+
+                <!-- Image 10 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_10"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_10_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_10_FIELD_TYPE_DESC" />
+                <field name="slide_url_10"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_10_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_10_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_10"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_10_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_10_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="10">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_10"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_10_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_10_FIELD_TYPE_DESC" />
+
+                <!-- Image 11 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_11"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_11_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_11_FIELD_TYPE_DESC" />
+                <field name="slide_url_11"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_11_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_11_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_11"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_11_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_11_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="11">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_11"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_11_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_11_FIELD_TYPE_DESC" />
+
+                <!-- Image 12 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_12"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_12_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_12_FIELD_TYPE_DESC" />
+                <field name="slide_url_12"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_12_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_12_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_12"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_12_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_12_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="12">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_12"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_12_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_12_FIELD_TYPE_DESC" />
+
+                <!-- Image 13 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_13"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_13_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_13_FIELD_TYPE_DESC" />
+                <field name="slide_url_13"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_13_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_13_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_13"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_13_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_13_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="13">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_13"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_13_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_13_FIELD_TYPE_DESC" />
+
+                <!-- Image 14 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_14"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_14_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_14_FIELD_TYPE_DESC" />
+                <field name="slide_url_14"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_14_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_14_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_14"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_14_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_14_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="14">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_14"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_14_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_14_FIELD_TYPE_DESC" />
+
+                <!-- Image 15 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_15"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_15_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_15_FIELD_TYPE_DESC" />
+                <field name="slide_url_15"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_15_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_15_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_15"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_15_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_15_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="15">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_15"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_15_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_15_FIELD_TYPE_DESC" />
+
+                <!-- Image 16 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_16"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_16_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_16_FIELD_TYPE_DESC" />
+                <field name="slide_url_16"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_16_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_16_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_16"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_16_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_16_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="16">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_16"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_16_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_16_FIELD_TYPE_DESC" />
+
+                <!-- Image 17 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_17"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_17_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_17_FIELD_TYPE_DESC" />
+                <field name="slide_url_17"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_17_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_17_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_17"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_17_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_17_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="17">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_17"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_17_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_17_FIELD_TYPE_DESC" />
+
+                <!-- Image 18 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_18"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_18_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_18_FIELD_TYPE_DESC" />
+                <field name="slide_url_18"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_18_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_18_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_18"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_18_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_18_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="18">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_18"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_18_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_18_FIELD_TYPE_DESC" />
+
+                <!-- Image 19 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_19"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_19_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_19_FIELD_TYPE_DESC" />
+                <field name="slide_url_19"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_19_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_19_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_19"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_19_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_19_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="19">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_19"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_19_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_19_FIELD_TYPE_DESC" />
+
+                <!-- Image 20 -->
+                <field type="spacer" hr="true" />
+                <field name="slide_path_20"
+                       type="media"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_20_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PATH_20_FIELD_TYPE_DESC" />
+                <field name="slide_url_20"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_URL_20_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_URL_20_FIELD_TYPE_DESC" />
+                <field name="slide_external_url_20"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_20_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_EXTERNAL_URL_20_FIELD_TYPE_DESC"
+                       default="0">
+                    <option value="0">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="20">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="slide_title_20"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_20_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLE_20_FIELD_TYPE_DESC" />
+			</fieldset>
+            <fieldset name="content_slide_settings">
+                <!-- Content 1 -->
+                <field name="slide_content_1"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_1_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_1_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 2 -->
+                <field name="slide_content_2"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_2_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_2_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 3 -->
+                <field name="slide_content_3"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_3_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_3_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 4 -->
+                <field name="slide_content_4"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_4_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_4_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 5 -->
+                <field name="slide_content_5"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_5_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_5_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 6 -->
+                <field name="slide_content_6"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_6_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_6_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 7 -->
+                <field name="slide_content_7"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_7_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_7_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 8 -->
+                <field name="slide_content_8"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_8_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_8_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 9 -->
+                <field name="slide_content_9"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_9_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_9_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 10 -->
+                <field name="slide_content_10"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_10_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_10_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 11 -->
+                <field name="slide_content_11"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_11_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_11_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 12 -->
+                <field name="slide_content_12"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_12_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_12_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 13 -->
+                <field name="slide_content_13"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_13_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_13_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 14 -->
+                <field name="slide_content_14"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_14_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_14_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 15 -->
+                <field name="slide_content_15"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_15_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_15_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 16 -->
+                <field name="slide_content_16"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_16_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_16_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 17 -->
+                <field name="slide_content_17"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_17_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_17_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 18 -->
+                <field name="slide_content_18"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_18_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_18_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 19 -->
+                <field name="slide_content_19"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_19_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_19_FIELD_TYPE_DESC"
+                       filter="raw" />
+
+                <!-- Content 20 -->
+                <field name="slide_content_20"
+                       type="editor"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_20_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTENT_20_FIELD_TYPE_DESC"
+                       filter="raw" />
+            </fieldset>
+            <fieldset name="MOD_RESPONSIVE_CONTENT_SLIDER_SETTINGS">
+                <field name="auto"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_AUTO_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_AUTO_FIELD_TYPE_DESC"
+                       default="true">
+                    <option value="false">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="true">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="touch_enabled"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TOUCH_ENABLED_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TOUCH_ENABLED_FIELD_TYPE_DESC"
+                       default="false">
+                    <option value="false">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="true">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="pause_between_slides"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_PAUSE_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_PAUSE_FIELD_TYPE_DESC"
+                       default="3000">
+                </field>
+                <field name="speed"
+                       type="text"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_SPEED_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_SPEED_FIELD_TYPE_DESC"
+                       default="1000">
+                </field>
+                <field name="controls"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_CONTROLS_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_CONTROLS_FIELD_TYPE_DESC"
+                       default="true">
+                    <option value="false">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="true">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="titles_as_captions"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_TITLES_AS_CAPTIONS_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_TITLES_AS_CAPTIONS_FIELD_TYPE_DESC"
+                       default="false">
+                    <option value="false">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="true">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+                <field name="random_start"
+                       type="radio"
+                       label="MOD_RESPONSIVE_CONTENT_SLIDER_RANDOM_START_FIELD_TYPE_LABEL"
+                       description="MOD_RESPONSIVE_CONTENT_SLIDER_RANDOM_START_FIELD_TYPE_DESC"
+                       default="false">
+                    <option value="false">MOD_RESPONSIVE_CONTENT_SLIDER_NO</option>
+                    <option value="true">MOD_RESPONSIVE_CONTENT_SLIDER_YES</option>
+                </field>
+            </fieldset>
+		</fields>
+	</config>
+</extension>
